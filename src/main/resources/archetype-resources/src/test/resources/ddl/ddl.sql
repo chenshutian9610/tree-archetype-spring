@@ -1,0 +1,3 @@
+--DROP DATABASE if EXISTS ${database};
+--CREATE DATABASE ${database} DEFAULT CHARACTER SET utf8;
+--USE ${database};

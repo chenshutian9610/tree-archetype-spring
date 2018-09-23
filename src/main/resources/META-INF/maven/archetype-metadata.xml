@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<archetype-descriptor name="spring-quickstart">
+    <fileSets>
+        <!-- packaged 为 true 时会创建包目录 -->
+        <!-- filter 为 ture 时会被包括,且 ${package} 等变量会被解析 -->
+        <fileSet filtered="true" packaged="true">
+            <directory>src/main/java</directory>
+            <includes>
+                <include>**/*</include>
+            </includes>
+            <excludes>
+                <exclude>**/.gitkeep</exclude>
+            </excludes>
+        </fileSet>
+        <fileSet filtered="true">
+            <directory>src/main/resources</directory>
+            <includes>
+                <include>**/*</include>
+            </includes>
+            <excludes>
+                <exclude>**/.gitkeep</exclude>
+            </excludes>
+        </fileSet>
+        <fileSet filtered="true">
+            <directory>src/main/webapp</directory>
+            <includes>
+                <include>**/*</include>
+            </includes>
+            <excludes>
+                <exclude>**/.gitkeep</exclude>
+            </excludes>
+        </fileSet>
+        <fileSet filtered="true">
+            <directory>src/test/java</directory>
+            <includes>
+                <include>**/*</include>
+            </includes>
+            <excludes>
+                <exclude>**/.gitkeep</exclude>
+            </excludes>
+        </fileSet>
+        <fileSet filtered="true">
+            <directory>src/test/resources</directory>
+            <includes>
+                <include>**/*</include>
+            </includes>
+            <excludes>
+                <exclude>**/.gitkeep</exclude>
+            </excludes>
+        </fileSet>
+        <!-- READMD.md -->
+        <fileSet>
+            <directory></directory>
+            <includes>
+                <include>README.md</include>
+            </includes>
+        </fileSet>
+    </fileSets>
+    <requiredProperties>
+        <!-- package -->
+        <requiredProperty key="package">
+            <defaultValue>com.tree</defaultValue>
+        </requiredProperty>
+        <!-- dataSource -->
+        <requiredProperty key="jdbc">
+            <defaultValue>mysql</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="database">
+            <defaultValue>testdb</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="username">
+            <defaultValue>root</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="password">
+            <defaultValue>0009</defaultValue>
+        </requiredProperty>
+    </requiredProperties>
+</archetype-descriptor>
