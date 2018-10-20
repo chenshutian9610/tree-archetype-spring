@@ -8,12 +8,12 @@ import org.dbunit.dataset.util.XlsDataSetBeanFactory;
 public class DaoTest extends BaseTest {
 
     @Test
-    @DataSet("initialize.xls")
+    @DataSet("./xls/initialize.xls")
     public void initTables(){
     }
 
     @Test
-    @ExpectedDataSet("expected.xls")
+    @ExpectedDataSet("./xls/expected.xls")
     public void saveCustomers() throws Exception{
     }
 

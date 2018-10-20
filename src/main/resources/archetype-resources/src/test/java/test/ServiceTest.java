@@ -16,7 +16,7 @@ public class ServiceTest extends BaseTest{
     }
 
     @Test
-    @DataSet("initialize.xls")
+    @DataSet("./xls/initialize.xls")
     public void testIntegration(){
     }
 

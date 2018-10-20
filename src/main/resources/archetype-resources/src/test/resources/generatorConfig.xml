@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 
 <generatorConfiguration>
-    <properties resource="jdbc.properties"/>
+    <properties resource="jdbc-test.properties"/>
     <context id="generateTables" targetRuntime="MyBatis3">
         <commentGenerator>
             <property name="suppressAllComments" value="true"/>
@@ -16,15 +16,15 @@
         <javaTypeResolver >
             <property name="forceBigDecimals" value="false" />
         </javaTypeResolver>
-        <javaModelGenerator targetPackage="${package}.domain" targetProject=".\src\main\java">
+        <javaModelGenerator targetPackage="${package}.domain" targetProject="./src/main/java">
             <property name="trimStrings" value="true" />
         </javaModelGenerator>
-        <sqlMapGenerator targetPackage="mapper"  targetProject=".\src\main\resources"/>
+        <sqlMapGenerator targetPackage="mapper"  targetProject="./src/main/resources"/>
         <javaClientGenerator type="XMLMAPPER" targetPackage="${package}.mapper"
-                             targetProject=".\src\main\java"/>
+                             targetProject="./src/main/java"/>
 
         <!-- write tableNames which you want to map -->
-        <table tableName=""/>
+        <table tableName="" mapperName="" domainObjectName=""/>
 
     </context>
 </generatorConfiguration>

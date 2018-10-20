@@ -7,7 +7,7 @@ import org.unitils.spring.annotation.SpringApplicationContext;
 import org.unitils.spring.annotation.SpringBean;
 import org.unitils.spring.annotation.SpringBeanByType;
 
-@SpringApplicationContext("beans.xml")
+@SpringApplicationContext("applicationContext-test.xml")
 public class BaseTest extends UnitilsTestNG {
     @SpringApplicationContext public ApplicationContext context;
     /*

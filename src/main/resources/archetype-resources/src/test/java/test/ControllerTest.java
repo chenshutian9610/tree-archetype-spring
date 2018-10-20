@@ -21,7 +21,7 @@ public class ControllerTest extends BaseTest {
     private MockHttpServletResponse response=new MockHttpServletResponse();
 
     @Test
-    @DataSet("initialize.xls")
+    @DataSet("./xls/initialize.xls")
     public void testUnit(){
     }
 

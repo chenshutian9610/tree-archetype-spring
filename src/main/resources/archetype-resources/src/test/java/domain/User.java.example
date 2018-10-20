@@ -1,0 +1,22 @@
+package domain;
+
+import javax.persistence.*;
+
+/**
+ * @author er_dong_chen
+ * @date 18-10-19
+ * 
+ * 示例
+ */
+@Entity
+@Table(name = "tb_user")
+public class User {
+    @Id
+    @GeneratedValue(generator = "myGenerator")
+    @GenericGenerator(name="myGenerator",strategy = "native")   //  auto_increment
+    private long id;
+    @Column(comment = "用户名",length = 20)
+    private String name;
+    @Column(comment = "密码",length = 25)
+    private String pwd;
+}
