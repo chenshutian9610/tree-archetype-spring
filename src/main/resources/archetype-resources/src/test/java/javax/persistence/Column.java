@@ -38,6 +38,6 @@ public @interface Column {
     /* modify here */
     String comment() default "";
 
-    String defaultValue() default "";
+    String defaultValue() default "null";   //  defaultValue 值为 null 时不会被识别
 
 }
