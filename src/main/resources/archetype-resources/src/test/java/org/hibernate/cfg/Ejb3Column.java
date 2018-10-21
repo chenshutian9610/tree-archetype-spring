@@ -24,6 +24,7 @@ import java.util.Map;
  * @date 18-10-19
  *
  * 添加一个 comment 字段，让 @Column 可以带注释
+ * 修改 defaultValue 的处理逻辑
  */
 public class Ejb3Column {
 
@@ -202,7 +203,8 @@ public class Ejb3Column {
             initMappingColumn(
                     logicalColumnName, propertyName, length, precision, scale, nullable, sqlType, unique, true,comment
             );
-            if ( defaultValue != null ) {
+            /* modify here */
+            if ( !"".equals(defaultValue) ) {
                 mappingColumn.setDefaultValue( defaultValue );
             }
             if ( LOG.isDebugEnabled() ) {
@@ -232,7 +234,8 @@ public class Ejb3Column {
             this.mappingColumn.setLength( length );
 
             /* modify here */
-            this.mappingColumn.setComment(comment);
+            if(!"".equals(comment))
+                this.mappingColumn.setComment(comment);
 
             if ( precision > 0 ) {  //revelent precision
                 this.mappingColumn.setPrecision( precision );
@@ -600,6 +603,7 @@ public class Ejb3Column {
 
                     /* modify here */
                     column.setComment(col.comment());
+                    column.setDefaultValue(col.defaultValue());
 
                     column.setExplicitTableName( tableName );
                     column.setPropertyHolder( propertyHolder );

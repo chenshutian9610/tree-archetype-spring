@@ -9,8 +9,7 @@ import java.lang.annotation.Target;
  * @author er_dong_chen
  * @date 18-10-20
  *
- * length 默认为 255，被修改为 30
- * 添加了一个 comment，用于表中字段的描述
+ * 添加了 comment 和 defaultValue
  */
 
 @Target({ElementType.METHOD, ElementType.FIELD})
@@ -39,5 +38,6 @@ public @interface Column {
     /* modify here */
     String comment() default "";
 
-}
+    String defaultValue() default "";
 
+}
