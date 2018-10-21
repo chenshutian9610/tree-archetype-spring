@@ -25,7 +25,7 @@
 ## 2.0.0
 
 * 新增特性（本次修改几乎在 test 中）<br>
-    修改了 @Column 和 Ejb3Column 的代码，使之可以使用 comment 属性<br>
+    修改了 @Column 和 Ejb3Column 的代码，使之可以使用 comment 和 defaultValue 属性<br>
     修改了 PropertyContainer 的代码，使通过注解生成的表的字段顺序不乱<br>
     正向工程和逆向工程的融合<br>
     &emsp;在 domain 中添加类<br>

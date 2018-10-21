@@ -15,7 +15,7 @@ public class User {
     @GeneratedValue(generator = "myGenerator")
     @GenericGenerator(name="myGenerator",strategy = "native")   //  auto_increment
     private long id;
-    @Column(comment = "用户名",length = 20)
+    @Column(comment = "用户名",length = 20,defaultValue="")
     private String name;
     @Column(comment = "密码",length = 25)
     private String pwd;
